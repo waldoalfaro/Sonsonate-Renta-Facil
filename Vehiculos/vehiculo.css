@@ -1,0 +1,317 @@
+
+
+/* Estilos mejorados para las tarjetas */
+
+body {
+    background: #fffdfdf9;
+    border-radius: 12px;
+
+}
+        .vehicle-card {
+            background: #fcfafa;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(237, 78, 78, 0.687);
+            overflow: hidden; /* evita que el contenido se salga */
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* fuerza a todas las tarjetas a tener el mismo alto */
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+             padding: 12px 16px;
+             border-bottom: 1px solid #eee;
+        }
+
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .vehicle-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .vehicle-subtitle {
+            opacity: 0.9;
+            margin: 5px 0 0 0;
+            font-size: 0.9rem;
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-disponible { background: #10b981; color: white; }
+        .status-no-disponible { background: #ef4444; color: white; }
+        .status-mantenimiento { background: #f59e0b; color: white; }
+        .status-de-baja { background: #6b7280; color: white; }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .vehicle-card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .no-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #9ca3af;
+        }
+
+        .card-content {
+           flex: 1; /* ocupa el espacio disponible */
+           padding: 16px;
+           overflow-wrap: break-word; /* corta palabras largas */
+           word-break: break-word; /* adicional por si acaso */
+        }
+
+        .vehicle-details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .detail-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-item {
+            flex: 1;
+            min-width: 0; /* evita que se rompa el flex */
+        }
+
+        .detail-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .detail-icon {
+            font-size: 1.1rem;
+            margin-right: 10px;
+            color: #667eea;
+            width: 20px;
+            text-align: center;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #4a5568;
+            min-width: 80px;
+            font-size: 0.85rem;
+        }
+
+        .detail-value {
+            color: #2d3748;
+            font-weight: 500;
+            margin-left: auto;
+        }
+
+        .detail-full-width {
+            flex: 100%;
+
+        }
+
+        .damages-list {
+           margin: 0;
+           padding-left: 18px;
+           max-height: 100px; /* limita altura */
+           overflow-y: auto; /* agrega scroll si hay demasiados daños */
+        }
+
+        .damages-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+        }
+
+        .damages-list li:last-child {
+            border-bottom: none;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .btn-action {
+            padding: 12px 20px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-edit {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+        }
+
+        .btn-edit:hover {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .btn-delete {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+        }
+
+        .btn-delete:hover {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .status-selector {
+            width: 100%; /* evita que se desborde */
+            margin-top: 10px;
+            padding: 6px;
+        }
+
+        .status-selector:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .status-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .price-highlight {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .detail-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animaciones adicionales */
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilos para el resto de elementos */
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+        }
+
+        .page-title {
+            font-size: 2.0rem;
+            font-weight: bold;
+            color: #26d519;
+            margin-bottom: 10px;
+        }
+
+        .page-subtitle {
+            color: #718096;
+            font-size: 1.1rem;
+        }
+        /* Estilos para el boton de agregar carro */
+
+        .add-vehicle-btn {
+            background: linear-gradient(135deg, #2ba81e 20%, #ffba16 100%);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 100;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .add-vehicle-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .loading-spinner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            display: none;
+        }
