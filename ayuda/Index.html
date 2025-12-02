@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-car"></i>
+                    <h1>Centro de Ayuda y Recursos</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#manuales" class="nav-link">Manuales</a>
+                    <a href="#videos" class="nav-link">Videos Tutoriales</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+   
+
+    <section id="manuales" class="section manuales-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-book"></i>
+                Manuales de Usuario
+            </h2>
+            <p class="section-description">Consulta y descarga los manuales según tu rol en el sistema</p>
+            
+            <div class="manuales-grid">
+                <div class="manual-card">
+                    <div class="manual-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="manual-title">Manual de Cliente</h3>
+                    <p class="manual-description">Guía completa para clientes sobre cómo rentar vehículos, gestionar reservas y realizar pagos.</p>
+                    <div class="manual-buttons">
+                        <button class="btn btn-primary" onclick="openManual('cliente')">
+                            <i class="fas fa-eye"></i> Visualizar
+                        </button>
+                        <a href="manuales/Documentaciòn final.pdf" download class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="manual-card">
+                    <div class="manual-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="manual-title">Manual de Administrador</h3>
+                    <p class="manual-description">Instrucciones detalladas para administradores sobre gestión de vehículos, usuarios y reportes.</p>
+                    <div class="manual-buttons">
+                        <button class="btn btn-primary" onclick="openManual('administrador')">
+                            <i class="fas fa-eye"></i> Visualizar
+                        </button>
+                        <a href="manuales/manual-administrador.pdf" download class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="manual-card">
+                    <div class="manual-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="manual-title">Manual de Empleado</h3>
+                    <p class="manual-description">Guía para empleados sobre atención al cliente, proceso de entrega y recepción de vehículos.</p>
+                    <div class="manual-buttons">
+                        <button class="btn btn-primary" onclick="openManual('empleado')">
+                            <i class="fas fa-eye"></i> Visualizar
+                        </button>
+                        <a href="manuales/manual-empleado.pdf" download class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="section videos-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-video"></i>
+                Videos Tutoriales
+            </h2>
+            <p class="section-description">Aprende a usar el sistema con nuestros videos paso a paso</p>
+            
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Introducción al Sistema</h3>
+                        <p class="video-description">Conoce las funcionalidades principales del sistema de renta de vehículos y cómo navegar por la plataforma.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Cómo Hacer una Reserva</h3>
+                        <p class="video-description">Aprende paso a paso cómo buscar vehículos disponibles, seleccionar fechas y completar tu reserva.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Gestión de Vehículos</h3>
+                        <p class="video-description">Para administradores: cómo agregar, editar y gestionar el inventario de vehículos en el sistema.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Proceso de Entrega y Recepción</h3>
+                        <p class="video-description">Guía para empleados sobre los procedimientos de inspección, entrega y recepción de vehículos.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Reportes y Estadísticas</h3>
+                        <p class="video-description">Aprende a generar reportes, visualizar estadísticas y analizar el rendimiento del negocio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" class="modal-title"></h2>
+                <div class="modal-actions">
+                    <a id="downloadBtn" href="#" download class="btn btn-download">
+                        <i class="fas fa-download"></i> Descargar PDF
+                    </a>
+                    <button class="close-btn" onclick="closeModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Renta de Vehículos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

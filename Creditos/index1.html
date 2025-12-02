@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créditos - Sonsonate Renta Fácil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .photo-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .placeholder-photo {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: white;
+            font-weight: bold;
+        }
+
+        .name {
+            text-align: center;
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .role {
+            text-align: center;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .bio {
+            color: #666;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            animation: fadeIn 2s ease;
+        }
+
+        .footer p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .header p {
+                font-size: 1em;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏆 Sonsonate Renta Fácil</h1>
+            <p>Equipo de Desarrollo - Créditos del Proyecto</p>
+        </div>
+
+        <div class="team-grid">
+            <!-- Scrum Master 1 -->
+            <div class="team-card">
+                <div class="photo-container">
+                    <!-- Reemplaza src con la ruta de la foto real -->
+                    <div class="placeholder-photo">SM</div>
+                    <!-- <img src="ruta-foto-1.jpg" alt="Scrum Master 1"> -->
+                </div>
+                <h2 class="name">Nombre del Scrum Master 1</h2>
+                <p class="role">Scrum Master</p>
+                <p class="bio">
+                    Profesional con X años de experiencia en gestión ágil de proyectos. 
+                    Especializado en metodologías Scrum y liderazgo de equipos de desarrollo. 
+                    Apasionado por la innovación tecnológica y el trabajo colaborativo.
+                </p>
+            </div>
+
+            <!-- Scrum Master 2 -->
+            <div class="team-card">
+                <div class="photo-container">
+                    <div class="placeholder-photo">SM</div>
+                    <!-- <img src="ruta-foto-2.jpg" alt="Scrum Master 2"> -->
+                </div>
+                <h2 class="name">Nombre del Scrum Master 2</h2>
+                <p class="role">Scrum Master</p>
+                <p class="bio">
+                    Experto en facilitar procesos ágiles y remover impedimentos del equipo. 
+                    Con experiencia en múltiples proyectos de software exitosos. 
+                    Comprometido con la mejora continua y la entrega de valor al cliente.
+                </p>
+            </div>
+
+            <!-- Scrum Master 3 -->
+            <div class="team-card">
+                <div class="photo-container">
+                    <div class="placeholder-photo">SM</div>
+                    <!-- <img src="ruta-foto-3.jpg" alt="Scrum Master 3"> -->
+                </div>
+                <h2 class="name">Nombre del Scrum Master 3</h2>
+                <p class="role">Scrum Master</p>
+                <p class="bio">
+                    Coach ágil certificado con amplia experiencia en transformación digital. 
+                    Enfocado en construir equipos de alto rendimiento y fomentar la cultura colaborativa. 
+                    Experto en gestión de stakeholders y comunicación efectiva.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>✨ Proyecto desarrollado con dedicación y trabajo en equipo ✨</p>
+            <p style="margin-top: 10px;">© 2025 Sonsonate Renta Fácil</p>
+        </div>
+    </div>
+</body>
+</html>

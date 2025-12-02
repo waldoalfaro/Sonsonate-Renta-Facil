@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffffff 0%, #fefdff 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.credits-section {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    color: rgb(0, 0, 0);
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.description {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #000000;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(102, 126, 234, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-card:hover .card-overlay,
+.team-card:focus-within .card-overlay {
+    opacity: 1;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #667eea;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+}
+
+.team-card:hover .social-links a,
+.team-card:focus-within .social-links a {
+    transform: translateY(0);
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    background: #764ba2;
+    color: white;
+    transform: scale(1.2);
+    outline: 3px solid white;
+    outline-offset: 2px;
+}
+
+.social-links a:focus {
+    outline: 3px solid white;
+    outline-offset: 2px;
+}
+
+@media (hover: none) {
+    .card-overlay {
+        position: static;
+        opacity: 1;
+        background: transparent;
+        margin-top: -60px;
+        z-index: 10;
+    }
+    
+    .social-links a {
+        transform: translateY(0);
+    }
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.member-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.member-role {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #667eea;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.member-info {
+    margin-bottom: 15px;
+}
+
+.member-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.member-info i {
+    color: #667eea;
+    width: 20px;
+}
+
+.member-info a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.member-info a:hover,
+.member-info a:focus {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.member-description {
+    font-size: 0.95rem;
+    color: #777;
+    line-height: 1.6;
+    border-top: 2px solid #f0f0f0;
+    padding-top: 15px;
+}
+
+.footer-credits {
+    text-align: center;
+    color: white;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+    .footer-credits {
+        background: rgba(102, 126, 234, 0.5);
+    }
+}
+
+.footer-credits p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.footer-credits p:last-child {
+    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .card-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .main-title {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+    
+    .member-name {
+        font-size: 1.2rem;
+    }
+    
+    .member-role {
+        font-size: 0.95rem;
+    }
+}
